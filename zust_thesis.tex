@@ -1,0 +1,220 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                               %%
+%%                  This is an open project.                     %%
+%%                     Written by Rocher.                        %%
+%%                                                               %%
+%%                                                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                               %%
+%%                           导言区                               %%
+%%                                                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------指定编译模式为xeLaTeX，字符集为UTF-8------------------%
+%!TEX program  = xelatex                                           
+%!Mode:: "TeX:UTF-8"
+\documentclass{ZUST_Thesis}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------                                ------------------%
+%                                                                  %
+%            ！！！封面文件使用word生成pdf后加入文档！！！               %
+%            ！！！生成的pdf文件需要命名为titlepage！！！               %
+%            ！！！   封面文件存放入.tex同名目录   ！！！               %
+%                                                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{浙江科技学院硕士学位论文} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                               %%
+%%                         开始文档                               %%
+%%                                                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%  生成标题页  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%  摘   要  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------          中文摘要              -------------------%
+\pagenumbering{Roman}
+\pagestyle{abstractch}
+\section*{摘\qquad 要}
+\phantomsection\addcontentsline{toc}{section}{\bfseries 摘\qquad 要}
+
+摘要的第一段主要阐述选题的意义。
+
+第二段简单介绍研究动机、方法、目的。从存在的问题出发，阐述你采用什么方法，依据什么理论来做什么事，从而解决了前面指出的那些问题及取得的成果。本文的主要工作和成果如下：
+
+1．针对....采用...，提出了...，效果如何；
+
+2．500字左右；
+
+摘要应表达学位论文的中心内容，简短明了，摘取论文中的基本信息，体现科研工作的核心思想。内容包括本文的目的和意义、研究方法、研究成果、结论。主要介绍自己的工作和取得的成果。根据内容自行分段描述。
+
+最后一段，对全文进行总结，并对进一步的研究提出一些展望。
+
+关键词数量为4－6个，每一关键词之间用逗号分开，最后一个关键词不用标点符号
+
+\heiti{\textbf{关键词：}}\songti 关键词1，关键词2，关键词3，关键词4，关键词5
+
+关键词数量为4－6个，每一关键词之间用逗号分开，最后一个关键词不用标点符号
+
+
+
+%-----------------          英文摘要              -------------------%
+\newpage
+\pagestyle{abstracten}
+\section*{ABSTRACT}
+\phantomsection\addcontentsline{toc}{section}{\bfseries ABSTRACT}
+
+The abstract in English goes here. Abstract in English should correspond to the  Chinese presented on the previous page. (英文摘要内容, 用小四号Times New Romans字体，每段开头留4个字符空格，英文摘要的内容应与中文摘要基本相对应)
+
+\textbf{Key Words:} Key Words 1, Key Words 2, Key Words 3, Key Words 4
+
+Key words in English go here and should be separated by a comma, but no comma is allowed after the last key word （关键词用小四号Times New Romans字体, 全部小写，每一关键词之间逗号分开，最后一个关键词后不打标点符号） 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  目   录  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{tabofcontent}
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  正   文  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{main}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% 自定义符号 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\abovedisplayskip{0em}
+\setlength\belowdisplayskip{0em}
+
+\section{引言}
+
+
+\subsection{国内外研究现状}
+
+
+这是引用的参考文献\cite{CNN}，参考文献\cite{DNN,深度学习,西瓜书}，以及参考文献\ncite{resnet}。
+
+
+
+\subsection{本文研究内容与组织结构}
+
+
+
+
+
+
+
+
+\section{方法}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{figure/mathtype2.jpg}   
+	\caption{示意图}
+	\label{fig_example}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\subfigure[子图1标题]{
+		\includegraphics[width=0.3\linewidth]{figure/mathtype2.jpg}}
+	\subfigure[子图2标题]{
+		\includegraphics[width=0.3\linewidth]{figure/mathtype2.jpg}}
+	\caption{多图示意}
+	\label{fig_subexample}
+\end{figure}
+
+\begin{table}[h]
+	\small
+	\setlength{\abovecaptionskip}{0em}
+	\setlength{\belowcaptionskip}{0.5em}
+	\renewcommand\arraystretch{1.5}
+	\setlength\tabcolsep{3pt}
+	\centering
+	\caption{示例表}
+	\label{tab_example}
+	\begin{tabular}{m{4cm}<{\centering}m{3cm}<{\centering}m{2cm}<{\centering}}
+		\toprule
+		表格内内容选单倍行距，在“格式－段落”的段前段后选3磅&总的原则是美观&第一行\\
+		\midrule
+		在“表格－表格属性”中选居中&$\pm\Omega_i$&$\mp\Omega_i$\\
+		第一列&$\pm\Omega_i$&$\mp\Omega_i$\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  附   录  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{appendix}
+\phantomsection\addcontentsline{toc}{section}{\bfseries 参考文献}
+\renewcommand{\refname}{参\quad 考\quad 文\quad 献}
+\setlength{\bibsep}{0em}
+\bibliographystyle{gbt7714-numerical}
+\begin{spacing}{1.25} 
+	\bibliography{ref.bib}
+\end{spacing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  致    谢  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{acknowledgement}
+\section*{致\qquad 谢}
+\phantomsection\addcontentsline{toc}{section}{\bfseries 致\qquad 谢}
+对给予各类指导、支持、和协助完成研究工作，以及提供各种条件的单位及个人表示感谢。致谢应实事求是，切忌浮夸与庸俗之词。 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%   科研成果   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{achievement}
+\section*{攻读学位期间参加的科研项目和成果}
+\phantomsection\addcontentsline{toc}{section}{\bfseries 攻读学位期间参加的科研项目和成果}
+
+本人在攻读研究生学位期间获得的科研成果有：
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
